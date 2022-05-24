@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Message;
+use App\User;
 
 class MessageController extends Controller
 {
@@ -21,8 +24,38 @@ class MessageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('message');
+        $id = $request->id;
+
+        return view('message', compact('id'));
+    }
+    
+    public function next()
+    {
+        return view('next');
+    }
+    
+    public function post(Request $request) 
+    {
+    
+        $user = User::where('username', '=', $request->username)->first();
+
+        if($user) {
+        
+            $message = new Message;
+            $message->UserId = $user->id;
+            $message->Message = $request->message;
+         
+            $message->save();
+
+            if(Auth::check()) {
+                return redirect('home?sendMessage=true');
+            } else {
+                return redirect('next?sendMessage=true');
+            }
+       
+        }
+
     }
 }

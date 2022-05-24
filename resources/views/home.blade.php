@@ -45,7 +45,7 @@ Share this link <wbr />with your friends and collect <wbr />Anonymous Messages
 </h2>
 <hr>
 <div class="row m-0 my-1 share_buttons text border-0">
-<input type="text" class="form-control text-center mb-1" name="url" id="url" value="{{ url('message') }}?id=j5bv86zz" onclick="copy()" readonly />
+<input type="text" class="form-control text-center mb-1" name="url" id="url" value="{{ url('message') }}?id={{ $user->username }}" onclick="copy()" readonly />
 <button class="btn btn-block  btn-copy mt-0 mb-1 share_btn_gleam" onclick="copy()">
 <i class="fa fa-copy"></i> Click to Copy
 </button>

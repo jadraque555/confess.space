@@ -10,10 +10,12 @@
 </div> </div>
 <div class="row">
 <div class="card col-12 col-sm-8 col-md-7  col-lg-5 col-xl-4 m-auto p-2 border-0 card-2">
-<form action="../message_h.php" method="post" name="ans" id="ans">
+<form action="{{ url('message') }}" method="post">
+{{ csrf_field() }}
+<input type="hidden" name="username" value="{{ $id }}" />
 <h2 class="animate__fadeIn" style="margin: 10px 0 25px 0; font-weight: 500;">Message <span class="name">your friend</span> Secretly 😉, they will never know who messaged them.😅</h2>
 <input type="text" style="display:none;" class="form-control " name="name" value="j5bv86zz">
-<div class="form-group"><textarea for="ans" name="ans1" cols="30" class="form-control" rows="5" placeholder="Write your secret message here" minlength="1" maxlength="5000" required=""></textarea></div>
+<div class="form-group"><textarea for="ans" name="message" cols="30" class="form-control" rows="5" placeholder="Write your secret message here" minlength="1" maxlength="5000" required=""></textarea></div>
 <div class="row">
 <div class="col-12">
 <input type="checkbox" name="agree" id="agree" required="" checked="">

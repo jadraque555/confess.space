@@ -23,5 +23,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/message', 'MessageController@index')->name('message');
+Route::post('/message', 'MessageController@post')->name('message');
+
+Route::get('/next', 'MessageController@next')->name('message');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
