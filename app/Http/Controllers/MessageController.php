@@ -58,4 +58,13 @@ class MessageController extends Controller
         }
 
     }
+
+    public function delete(Request $request) 
+    {
+        $message = Message::find($request->id);
+
+        $message->delete();
+
+        return redirect('home');
+    }
 }

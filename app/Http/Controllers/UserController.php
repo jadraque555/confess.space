@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Message;
+use App\User;
 
-class HomeController extends Controller
+class UserController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -23,11 +23,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function deleteUser(Request $request)
     {
-        $user = Auth::user();
-        $messages = Message::where('UserId','=', $user->id)->get();
+ 
+        $user = User::where('username', '=', $request->username);
+        
+        $user->delete();
 
-        return view('home', compact('user', 'messages'));
+        return redirect('logout');
     }
 }

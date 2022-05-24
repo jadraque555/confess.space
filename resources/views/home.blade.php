@@ -154,47 +154,59 @@ We are currently working on new games and funny challenges. Enter your email bel
 <h2 class="text-center"><strong> Anonymous Message Timeline </strong></h2>
 <hr>
 
+@if($messages) 
+    @foreach($messages as $key => $message)
+        <div class="row message_holder p-2">
+        <div class="card message  message-4 border-0 mx-auto p-3" id="message_0">
+            <div class="message_text">
+            opaw </div>
+            <div class="footer_menu mt-2">
+            <div class="message_divider float-left">
+            SecretM.Me </div>
+            <form action="{{ url('message/delete') }}" class="delete_form" method="post">
+            <div class="form-group m-0 p-0">
+            <input type="text" name="id" value="{{ $message->id }}" class="hidden_feild">
+            <input type="text" name="message_to_delete" value="b3Bhdw==" class="hidden_feild">
+            <input type="text" name="message_id" value="message_0" class="hidden_feild">
+            <input type="text" name="delete_form" value="Delete" class="hidden_feild">
+            </div>
+            <a href="{{ url('message/delete?id=').$message->id }}" class="text-center square  bg-white "><i class="fas fa-trash" style="color:black;margin-top:8px"></i></a>
+            <!-- <button type="submit" class="text-center square  bg-white"><i class="fas fa-trash"></i></button> -->
+            </form>
+            </div>
+            </div>
+        </div>
+    
+    @endforeach
+</div>
+</div>
+@else 
 
-<!-- <div class="row message_holder p-2">
-<div class="card message  message-4 border-0 mx-auto p-3" id="message_0">
+    <div class="row message_holder p-2">
+    <div class="card message message-none border-0 mx-auto p-3">
     <div class="message_text">
-    opaw </div>
-    <div class="footer_menu mt-2">
+    You don't have any messages yet. <br>
+    Newer messages will appear here!
+    </div>
+    <div class="footer_menu">
     <div class="message_divider float-left">
     SecretM.Me </div>
-    <form action="delete.php" class="delete_form" method="post">
-    <div class="form-group m-0 p-0">
-    <input type="text" name="id" value="j5bv86zz" class="hidden_feild">
-    <input type="text" name="message_to_delete" value="b3Bhdw==" class="hidden_feild">
-    <input type="text" name="message_id" value="message_0" class="hidden_feild">
-    <input type="text" name="delete_form" value="Delete" class="hidden_feild">
-    </div>
-    <button class="text-center square  bg-white"><i class="fas fa-trash"></i></button>
-    </form>
     </div>
     </div>
-</div> -->
+    </div>
+    </div>
+    </div>
 
-<div class="row message_holder p-2">
-<div class="card message message-none border-0 mx-auto p-3">
-<div class="message_text">
-You don't have any messages yet. <br>
-Newer messages will appear here!
-</div>
-<div class="footer_menu">
-<div class="message_divider float-left">
-SecretM.Me </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
+@endif
+
+
+
+<!-- <div class="row">
 <div class="card card-2 col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 p-2 mx-auto my-2">
 <div id="taboola-below-homepage-thumbnails"></div>
 
 </div>
-</div>
+</div> -->
 </div>
 <a href="" id="ref" onclick="refresh()" class="refresh rounded-left border-right-0"><i class="fa fa-repeat"></i> Refresh</a>
 
@@ -692,10 +704,10 @@ It's fun, Try here 👉 ">
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-<button class="btn p-1 rounded danger bg-danger" id="delete_account" onclick="delete_account()">
+<a href="{{ url('delete_user?username=').$user->username }}" class="btn p-1 rounded danger bg-danger" id="delete_account">
 <i class="fas fa-trash" aria-hidden="true"></i>
 Delete Account
-</button>
+</a>
 </div>
 </div>
 </div>
