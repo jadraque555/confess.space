@@ -159,7 +159,7 @@ We are currently working on new games and funny challenges. Enter your email bel
         <div class="row message_holder p-2">
         <div class="card message  message-4 border-0 mx-auto p-3" id="message_0">
             <div class="message_text">
-            opaw </div>
+            {{ $message->Message }} </div>
             <div class="footer_menu mt-2">
             <div class="message_divider float-left">
             SecretM.Me </div>
