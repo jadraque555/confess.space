@@ -206,11 +206,11 @@ Once you delete any message, it’s permanently deleted from our servers. Theref
 </div>
 
 
-<div class="col-md-2 mb-3">
+<!-- <div class="col-md-2 mb-3">
 <h6 class="text-uppercase font-weight-bold">
 <a href="about.html" class="text-light">About us</a>
 </h6>
-</div>
+</div> -->
 
 
 <div class="col-md-2 mb-3">
@@ -236,11 +236,11 @@ Once you delete any message, it’s permanently deleted from our servers. Theref
 
 
 
-<div class="col-md-2 mb-3">
+<!-- <div class="col-md-2 mb-3">
 <h6 class="text-uppercase font-weight-bold">
 <a href="contact-us.html" class="text-light">Contact Us</a>
 </h6>
-</div>
+</div> -->
 
 </div>
 
