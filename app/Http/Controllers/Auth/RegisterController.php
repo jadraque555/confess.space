@@ -63,19 +63,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $username = '';
+        $username = $this->usernameFilter($data['name']);
         $password = $this->gen_pin(6);
-        $count = 0;
+        // $count = 0;
 
-        for (;;) {
-            $count++;
+        // for (;;) {
+        //     $count++;
 
-            $username = $this->gen_uid(8);
+        //     $username = $this->gen_uid(8);
 
-            if($this->usernameIfExist($username) == false) {
-                break;
-            }
-        }
+        //     if($this->usernameIfExist($username) == false) {
+        //         break;
+        //     }
+        // }
 
         return User::create([
             'name' => $data['name'],
@@ -99,9 +99,38 @@ class RegisterController extends Controller
 
         return $user ? true : false;
     }
-    // public function getRandomWord($len = 10) {
-    //     $word = array_merge(range('a', 'z'), range('A', 'Z'));
-    //     shuffle($word);
-    //     return substr(implode($word), 0, $len);
-    // }
+
+    public function usernameFilter($username) 
+    {
+
+        $username = str_replace(' ', '', $username);
+        $alpabhet = range('A', 'Z');
+        $genUsername = "";
+
+        foreach ($alpabhet as $key => $value) {
+            $selected = false;
+            $selectedUsername = "";
+
+            for ($i=1; $i < 10; $i++) { 
+                $checkUsername = $this->usernameIfExist($username.$value.$i);
+
+                if($checkUsername == false) {
+                    $selected = true;
+                    $selectedUsername = $username.$value.$i;
+                    break;
+                }
+            }
+
+            if($selected) {
+                $genUsername = $selectedUsername;
+                break;
+            }
+
+        }
+
+        return $genUsername ? $genUsername : false;
+
+
+
+    }
 }

@@ -13,7 +13,7 @@
 <div class="col-12 col-sm-8 col-md-7 col-lg-5 col-xl-4 m-auto p-0 rounded card-1 animate__headShake" id="tray">
 <div id="pin_tray ">
 <div class="row m-auto p-2">
-<img src="/src/img/logo.png" alt="SecretM.Me logo" class="rounded-circle col-4 m-auto logo-page">
+<img src="{{ asset('img/favicon-32x32.png') }}" alt="confess.space logo" class="rounded-circle col-4 m-auto logo-page">
 <div class="password col-8 d-flex justify-content-center align-items-center">
 <ul id="pass">
 <li><strong>User ID - </strong><span class="imp">{{ $user->username }}</span></li>
@@ -23,7 +23,7 @@
 </div>
 </div>
 <p id="domain_abb" class="p-2 m-0 text-center">
-https://SecretM.Me </p>
+http://confess.space </p>
 <p class=" text-center p-2 m-0">
 <strong> Please take a screenshot of these details </strong><br>
 You need these details to login from anywhere! PIN cannot be restored!
@@ -105,7 +105,7 @@ Open Share Menu <i class="fas fa-share"></i>
 </div>
 
 <div class="row">
-<div class="card card-2 col-12 col-sm-8 col-md-7 col-lg-5 col-xl-4 p-2 mx-auto my-2">
+<!-- <div class="card card-2 col-12 col-sm-8 col-md-7 col-lg-5 col-xl-4 p-2 mx-auto my-2">
 <div id="taboola-mid-homepage-thumbnails"></div>
 <script type="text/javascript">
                     window._taboola = window._taboola || [];
@@ -116,9 +116,9 @@ Open Share Menu <i class="fas fa-share"></i>
                         target_type: 'mix'
                     });
                 </script>
+</div> -->
 </div>
-</div>
-<div class="row" id="email_form">
+<!-- <div class="row" id="email_form">
 <div class="card card-2 col-12 col-sm-8 col-md-7  col-lg-5 col-xl-4 p-2 mx-auto my-2">
 <div class="row">
 <div class="p-5">
@@ -148,13 +148,13 @@ We are currently working on new games and funny challenges. Enter your email bel
 </div>
 </div>
 </div>
-</div>
+</div> -->
 <div class="row timeline my-2">
 <div class="card col-12 col-sm-8 col-md-7 col-lg-5 col-xl-4 mx-auto p-3 rounded card-2 border-0" id="timeline">
 <h2 class="text-center"><strong> Anonymous Message Timeline </strong></h2>
 <hr>
 
-@if($messages) 
+@if(count($messages) != 0) 
     @foreach($messages as $key => $message)
         <div class="row message_holder p-2">
         <div class="card message  message-4 border-0 mx-auto p-3" id="message_0">
@@ -162,7 +162,7 @@ We are currently working on new games and funny challenges. Enter your email bel
             {{ $message->Message }} </div>
             <div class="footer_menu mt-2">
             <div class="message_divider float-left">
-            SecretM.Me </div>
+            confess.space </div>
             <form action="{{ url('message/delete') }}" class="delete_form" method="post">
             <div class="form-group m-0 p-0">
             <input type="text" name="id" value="{{ $message->id }}" class="hidden_feild">
@@ -190,7 +190,7 @@ We are currently working on new games and funny challenges. Enter your email bel
     </div>
     <div class="footer_menu">
     <div class="message_divider float-left">
-    SecretM.Me </div>
+    confess.space </div>
     </div>
     </div>
     </div>
@@ -297,7 +297,7 @@ We are currently working on new games and funny challenges. Enter your email bel
 
         function delete_account() {
             if (confirm('Are you sure you want to delete your account?')) {
-                window.location.href = "https://secretm.me/delete_account.php";
+                window.location.href = "https://confess.space/delete_account.php";
             } else {
                 // Do nothing!
                 console.log('Thing was not saved to the database.');
@@ -373,7 +373,7 @@ We are currently working on new games and funny challenges. Enter your email bel
 Send Secret Message to jayson
 🤩 I will never know who sent me which message 🤔
 It's fun, Try here 👉 `,
-                        url: `https://secretm.me/message.php?id=j5bv86zz`
+                        url: `https://confess.space/message.php?id=j5bv86zz`
                     }).then(() => {
                         console.log('Thanks for sharing!');
                         try {
@@ -417,7 +417,7 @@ It's fun, Try here 👉 `,
         function copyNewLink() {
             const el = document.createElement('textarea');
 
-            var message_text = `https://secretm.me/message.php?id=j5bv86zz`;
+            var message_text = `https://confess.space/message.php?id=j5bv86zz`;
             el.value = message_text;
 
             el.setAttribute('readonly', '');
@@ -450,7 +450,7 @@ It's fun, Try here 👉 `,
             var message_text = `✉️💬💌
 Send Secret Message to jayson
 🤩 I will never know who sent me which message 🤔
-It's fun, Try here 👉 ` + `https://secretm.me/message.php?id=j5bv86zz`;
+It's fun, Try here 👉 ` + `https://confess.space/message.php?id=j5bv86zz`;
             console.log(message_text)
             el.value = message_text;
 
@@ -515,7 +515,7 @@ It's fun, Try here 👉 ` + `https://secretm.me/message.php?id=j5bv86zz`;
             } catch (e) {
                 console.error(e);
             }
-            var linkShare = `https://secretm.me/message.php?id=j5bv86zz`;
+            var linkShare = `https://confess.space/message.php?id=j5bv86zz`;
 
             window.open(`https://www.addtoany.com/add_to/facebook_messenger?linkurl=${ linkShare }linkname=✉️💬💌
 Send Secret Message to jayson
@@ -532,7 +532,7 @@ It's fun, Try here 👉 `, "_blank")
             } catch (e) {
                 console.error(e);
             }
-            var linkShare = `https://secretm.me/message.php?id=j5bv86zz`;
+            var linkShare = `https://confess.space/message.php?id=j5bv86zz`;
             window.open(`https://www.addtoany.com/add_to/facebook?linkurl=${ linkShare }linkname=✉️💬💌
 Send Secret Message to jayson
 🤩 I will never know who sent me which message 🤔
@@ -562,7 +562,7 @@ It's fun, Try here 👉 `, "_blank");
                 // Honeybadger.notify(e);
                 console.error(e);
             }
-            window.open("whatsapp://send?text=%E2%9C%89%EF%B8%8F%F0%9F%92%AC%F0%9F%92%8C%0D%0ASend+Secret+Message+to+%2Ajayson%2A%0D%0A%F0%9F%A4%A9+I+will+never+know+who+sent+me+which+message+%F0%9F%A4%94%0D%0AIt%27s+fun%2C+Try+here+%F0%9F%91%89+https://secretm.me/message.php?id=j5bv86zz", "_blank");
+            window.open("whatsapp://send?text=%E2%9C%89%EF%B8%8F%F0%9F%92%AC%F0%9F%92%8C%0D%0ASend+Secret+Message+to+%2Ajayson%2A%0D%0A%F0%9F%A4%A9+I+will+never+know+who+sent+me+which+message+%F0%9F%A4%94%0D%0AIt%27s+fun%2C+Try+here+%F0%9F%91%89+https://confess.space/message.php?id=j5bv86zz", "_blank");
         }
 
         $(".share_btn_gleam").click(function() {
@@ -585,7 +585,7 @@ It's fun, Try here 👉 `, "_blank");
 </div>
 <div class="modal-body ">
 
-<div class="a2a_kit a2a_kit_size_54 a2a_default_style" data-a2a-url="https://secretm.me/message.php?id=j5bv86zz" data-a2a-title="✉️💬💌
+<div class="a2a_kit a2a_kit_size_54 a2a_default_style" data-a2a-url="https://confess.space/message.php?id=j5bv86zz" data-a2a-title="✉️💬💌
 Send Secret Message to jayson
 🤩 I will never know who sent me which message 🤔
 It's fun, Try here 👉 ">
@@ -836,11 +836,11 @@ Send the link as Direct Message(DM) to friends.
 </div>
 
 
-<div class="col-md-2 mb-3">
+<!-- <div class="col-md-2 mb-3">
 <h6 class="text-uppercase font-weight-bold">
 <a href="../../about.php" class="text-light">About us</a>
 </h6>
-</div>
+</div> -->
 
 
 <div class="col-md-2 mb-3">
@@ -866,11 +866,11 @@ Send the link as Direct Message(DM) to friends.
 
 
 
-<div class="col-md-2 mb-3">
+<!-- <div class="col-md-2 mb-3">
 <h6 class="text-uppercase font-weight-bold">
 <a href="../../contact-us.php" class="text-light">Contact Us</a>
 </h6>
-</div>
+</div> -->
 
 </div>
 
@@ -882,7 +882,7 @@ Send the link as Direct Message(DM) to friends.
 
 
 <div class="footer-copyright text-center py-3 " style="background-color: indigo">© 2022 Copyright:
-<a href="https://secretm.me/" class="text-light"> SecretM.Me</a>
+<a href="https://confess.space/" class="text-light"> Confess.space</a>
 </div>
 
 
