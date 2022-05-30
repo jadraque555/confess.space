@@ -29,7 +29,7 @@
 </div>
 <div class="form-group text-center">
 <input type="checkbox" name="agree" id="agree" required checked>
-<label for="agree">You agree to <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms and condition</a> of our website.</label>
+<label for="agree">You agree to <a href="{{ url('/') }}">Privacy Policy</a> and <a href="{{ url('/') }}">Terms and condition</a> of our website.</label>
 </div>
 </form>
 </div>
@@ -39,10 +39,10 @@
 <h2 class="accordionH2">Frequently Asked Questions</h2>
 <div class="accordion">
 <div class="accordion-item">
-<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What is secretM.me?</span><span class="icon" aria-hidden="true"></span></button>
+<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What is Confess.Space?</span><span class="icon" aria-hidden="true"></span></button>
 <div class="accordion-content">
 <p>
-SecretM.me allows you to get anonymous feedback from your friends, co-workers and
+Confess.Space allows you to get anonymous feedback from your friends, co-workers and
 fans. Discover your strengths and areas of improvement by receiving feedbacks from everyone.
 </p>
 </div>
@@ -51,17 +51,17 @@ fans. Discover your strengths and areas of improvement by receiving feedbacks fr
 <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Are secret messages for friends only?</span><span class="icon" aria-hidden="true"></span></button>
 <div class="accordion-content">
 <p>
-No, you can receive secret messages from every one. You just have to share secretM.me
+No, you can receive secret messages from every one. You just have to share Confess.Space
 link on WhatsApp status or any other social media. Many people will start sharing their honest
 feedback to you because they know you will never know who they are.
 </p>
 </div>
 </div>
 <div class="accordion-item">
-<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why I should use SecretM.me?</span><span class="icon" aria-hidden="true"></span></button>
+<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why I should use Confess.Space?</span><span class="icon" aria-hidden="true"></span></button>
 <div class="accordion-content">
 <p>
-SecretM.me is an anonymous secret message platform which has many unique features.
+Confess.Space is an anonymous secret message platform which has many unique features.
 You can check out by using just once.
 </p>
 </div>
@@ -142,7 +142,7 @@ Try refreshing the page.
 <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How to create my account?</span><span class="icon" aria-hidden="true"></span></button>
 <div class="accordion-content">
 <p>
-Go to the website(https://secretm.me), Enter your name and then click the “Create your Link” button. Your account is now created. Copy your link by clicking the “Copy Link” button and then share that link on all your Social Media Accounts.
+Go to the website(https://Confess.Space), Enter your name and then click the “Create your Link” button. Your account is now created. Copy your link by clicking the “Copy Link” button and then share that link on all your Social Media Accounts.
 </p>
 </div>
 </div>
@@ -250,21 +250,8 @@ Once you delete any message, it’s permanently deleted from our servers. Theref
 
 
 <div class="footer-copyright text-center py-3 " style="background-color: indigo">© 2022 Copyright:
-<a href="index.html" class="text-light"> SecretM.Me</a>
+<a href="index.html" class="text-light"> Confess.Space</a>
 </div>
 
-</h6>
-</div>
-
-</div>
-
-
-
-</div>
-
-
-<div class="footer-copyright text-center py-3 " style="background-color: indigo">© 2022 Copyright:
-<a href="index.html" class="text-light"> SecretM.Me</a>
-</div>
 
 @endsection
