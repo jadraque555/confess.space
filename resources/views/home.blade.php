@@ -45,7 +45,7 @@ Share this link <wbr />with your friends and collect <wbr />Anonymous Messages
 </h2>
 <hr>
 <div class="row m-0 my-1 share_buttons text border-0">
-<input type="text" class="form-control text-center mb-1" name="url" id="url" value="{{ url('message') }}?id={{ $user->username }}" onclick="copy()" readonly />
+<input type="text" class="form-control text-center mb-1" name="url" id="url" value="{{ url('message') }}/{{ $user->username }}" onclick="copy()" readonly />
 <button class="btn btn-block  btn-copy mt-0 mb-1 share_btn_gleam" onclick="copy()">
 <i class="fa fa-copy"></i> Click to Copy
 </button>
@@ -822,7 +822,7 @@ Send the link as Direct Message(DM) to friends.
 <img src="https://notix.io/mt.gif?user=j5bv86zz&app_id=10041639860b94cf6981d09a08a5e64" width="1" height="1">
 <img src="https://notix.io/rtg.gif?px=472a4ea0-0d22-4874-ae38-32f36ca53678&app_id=10041639860b94cf6981d09a08a5e64" width="1" height="1">
 
-<footer style="background: blueviolet; color: white; margin-top:10px;">
+<footer style="background-image: linear-gradient(to right top, #dd5e89, #e97584, #f18c84, #f5a48a, #f7bb97); color: white; margin-top:10px;">
 
 <div class="container">
 <hr class="clearfix d-md-none" style="margin: 10% 15% 5%;">
@@ -881,7 +881,7 @@ Send the link as Direct Message(DM) to friends.
 </div>
 
 
-<div class="footer-copyright text-center py-3 " style="background-color: indigo">© 2022 Copyright:
+<div class="footer-copyright text-center py-3 " style="background-color: #DD5E89">© 2022 Copyright:
 <a href="https://confess.space/" class="text-light"> Confess.space</a>
 </div>
 
