@@ -17,12 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/message', 'MessageController@index')->name('message');
+Route::get('/message/{id}', 'MessageController@index')->name('message');
 Route::post('/message', 'MessageController@post')->name('message');
 Route::get('/message/delete', 'MessageController@delete');
 

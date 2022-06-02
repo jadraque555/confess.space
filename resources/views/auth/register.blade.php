@@ -192,7 +192,7 @@ Once you delete any message, it’s permanently deleted from our servers. Theref
         }
 </script>
 
-<footer style="background: blueviolet; color: white; margin-top:10px;">
+<footer style="background-image: linear-gradient(to right top, #dd5e89, #e97584, #f18c84, #f5a48a, #f7bb97); color: white; margin-top:10px;">
 
 <div class="container">
 <hr class="clearfix d-md-none" style="margin: 10% 15% 5%;">
@@ -249,7 +249,7 @@ Once you delete any message, it’s permanently deleted from our servers. Theref
 </div>
 
 
-<div class="footer-copyright text-center py-3 " style="background-color: indigo">© 2022 Copyright:
+<div class="footer-copyright text-center py-3 " style="background-color: #DD5E89">© 2022 Copyright:
 <a href="index.html" class="text-light"> Confess.Space</a>
 </div>
 
