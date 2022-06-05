@@ -25,7 +25,7 @@ Auth::routes();
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/message/{id}', 'MessageController@index')->name('message');
+Route::get('/msg/{id}', 'MessageController@index')->name('message');
 Route::post('/message', 'MessageController@post')->name('message');
 Route::get('/message/delete', 'MessageController@delete');
 
