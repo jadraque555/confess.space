@@ -157,22 +157,33 @@ We are currently working on new games and funny challenges. Enter your email bel
 @if(count($messages) != 0) 
     @foreach($messages as $key => $message)
         <div class="row message_holder p-2">
-        <div class="card message  message-4 border-0 mx-auto p-3" id="message_0">
-            <div class="message_text">
+            <!-- <div class="flex flex-col">
+                <div class="">
+                <div class="message_text">
+                    {{ $message->Message }} </div>
+                    <div class="footer_menu mt-2">
+                    <div class="message_divider float-left">
+                    confess.space </div>
+                </div>
+            </div> -->
+        <div class="card message  bg-transparent text-dark mx-auto" style="border:2px solid #f5a48a" id="message_0">
+            <div class="message_text p-2" style="font-size:30px !important;">
             {{ $message->Message }} </div>
-            <div class="footer_menu mt-2">
-            <div class="message_divider float-left">
-            confess.space </div>
-            <form action="{{ url('message/delete') }}" class="delete_form" method="post">
-            <div class="form-group m-0 p-0">
-            <input type="text" name="id" value="{{ $message->id }}" class="hidden_feild">
-            <input type="text" name="message_to_delete" value="b3Bhdw==" class="hidden_feild">
-            <input type="text" name="message_id" value="message_0" class="hidden_feild">
-            <input type="text" name="delete_form" value="Delete" class="hidden_feild">
+            <div style="background:#f5a48a" class="p-1 px-2 text-white">
+                <div class="footer_menu mt-2">
+                <div class="message_divider float-left">
+                confess.space </div>
+                <form action="{{ url('message/delete') }}" class="delete_form" method="post">
+                <div class="form-group m-0 p-0">
+                <input type="text" name="id" value="{{ $message->id }}" class="hidden_feild">
+                <input type="text" name="message_to_delete" value="b3Bhdw==" class="hidden_feild">
+                <input type="text" name="message_id" value="message_0" class="hidden_feild">
+                <input type="text" name="delete_form" value="Delete" class="hidden_feild">
+                </div>
+                <a href="{{ url('message/delete?id=').$message->id }}" class="text-center square  bg-white "><i class="fas fa-trash" style="color:black;margin-top:8px"></i></a>
+                <!-- <button type="submit" class="text-center square  bg-white"><i class="fas fa-trash"></i></button> -->
+                </form>
             </div>
-            <a href="{{ url('message/delete?id=').$message->id }}" class="text-center square  bg-white "><i class="fas fa-trash" style="color:black;margin-top:8px"></i></a>
-            <!-- <button type="submit" class="text-center square  bg-white"><i class="fas fa-trash"></i></button> -->
-            </form>
             </div>
             </div>
         </div>
