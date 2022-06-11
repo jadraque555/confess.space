@@ -12,6 +12,16 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5"> 
     <meta name="msapplication-TileColor" content="#9f00a7">
     <meta name="theme-color" content="#8a2be2">
+
+
+    <meta property='og:title' content='TITLE OF YOUR WEBSITE'/>
+    <meta property='og:image' content='{{ {{ asset("img/thumbnail.png") }} }}'/>
+    <meta property='og:description' content='Confess Space'/>
+    <meta property='og:url' content='{{{ url("/") }}'/>
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='627' />
+    <meta property="og:type" content='website'/>
+
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" integrity="sha512-k78e1fbYs09TQTqG79SpJdV4yXq8dX6ocfP0bzQHReQSbEghnS6AQHE2BbZKns962YaqgQL16l7PkiiAHZYvXQ==" crossorigin="anonymous" />
