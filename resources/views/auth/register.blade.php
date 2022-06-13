@@ -11,12 +11,12 @@
 </div> </div>
 <div class="row">
 <div class="card card-2 col-12 col-sm-8 col-md-7  col-lg-5 col-xl-4 p-2 m-auto">
-<h1 class="card-title text-center">Secret Messages 2022 <br> 😍</h1>
-<h6 class="card-subtitle text-center text-muted">Get anonymous feedback from your friends, coworkers and Fans.</h6>
+<h1 class="card-title text-center">Confession Message 2022 <br> 😍</h1>
+<h6 class="card-subtitle text-center text-muted">Get confession feedback from your friends, coworkers and Fans.</h6>
 <hr>
 <ol class="m-2 mt-3 mb-3 list-unstyled animate__fadeIn">
-<li style="color: indigo;">You can never know who messaged you!🔮</li>
-<li class="text-muted">Please allow <strong>NOTIFICATION</strong> to receive notifications about new message.</li>
+<li style="color: indigo;">You can never know who confessed you!🔮</li>
+<li class="text-muted">Please allow <strong>NOTIFICATION</strong> to receive notifications about new confess.</li>
 </ol>
 <form class="form-horizontal" method="POST" action="{{ route('register') }}">
 {{ csrf_field() }}
