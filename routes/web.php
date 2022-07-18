@@ -30,6 +30,7 @@ Route::post('/message', 'MessageController@post')->name('message');
 Route::get('/message/delete', 'MessageController@delete');
 
 Route::get('/next', 'MessageController@next')->name('message');
+Route::get('/view/{id}', 'MessageController@view')->name('view');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 

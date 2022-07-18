@@ -166,8 +166,8 @@ We are currently working on new games and funny challenges. Enter your email bel
                     confess.space </div>
                 </div>
             </div> -->
-        <div class="card message  bg-transparent text-dark mx-auto" style="border:2px solid #f5a48a" id="message_0">
-            <div class="message_text p-2" style="font-size:30px !important;">
+        <div class="card message  bg-transparent text-dark mx-auto" style="border:2px solid #f5a48a;cursor:pointer" id="message_0" onClick="window.location.href='{{ url('view/').'/'.$message->id }}'">
+            <div class="message_text p-2" style="font-size:17x !important;">
             {{ $message->Message }} </div>
             <div style="background:#f5a48a" class="p-1 px-2 text-white">
                 <div class="footer_menu mt-2">

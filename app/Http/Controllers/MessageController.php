@@ -33,6 +33,13 @@ class MessageController extends Controller
     {
         return view('next');
     }
+
+    public function view(Request $request, $id)
+    {
+        $message = Message::find($id);
+
+        return view('message-details', compact('message'));
+    }
     
     public function post(Request $request) 
     {
