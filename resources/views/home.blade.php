@@ -59,12 +59,12 @@
                         </div>
                     </div>
                     <div class="col-md-12 d-flex justify-content-center pb-1">
-                        <img src="{{ asset('img/websiteUrl.png') }}" style="width:250px" />
+                        <img src="{{ asset('img/websiteUrl.PNG') }}" style="width:250px" />
                     </div>
                 </div>
                 <h4 class="text-white pt-3 mx-md-4 text-center">
                     <span style="font-size: 20x">Hide Login Details</span>
-                    <img src="{{ asset('img/hide.PNG') }}" onClick="handleShowDetails('hide')" style="width:35px;cursor:pointer" class="ml-2 " />
+                    <img src="{{ asset('img/hide.png') }}" onClick="handleShowDetails('hide')" style="width:35px;cursor:pointer" class="ml-2 " />
                 </h4> 
             </div>
             <br>
@@ -524,7 +524,6 @@ Send the link as Direct Message(DM) to friends.
         }
 
         function handleRefresh() {
-            alert('sfds')
             window.location.reload();
         }
     </script>
