@@ -23,14 +23,20 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
     
         $user = Auth::user();
+        $seeMore = $request->seeMore;
 
-        $messages = Message::where('UserId','=', $user->id)->get();
+        $messages = Message::where('UserId','=', $user->id);
+        $messages->orderBy("id", "desc");
+        if(!$seeMore) {
+            $messages->limit(1);
+        } 
+        $messages = $messages->get();
 
-        return view('home', compact('user', 'messages'));
+        return view('home', compact('user', 'messages', 'seeMore'));
     }
  
 }

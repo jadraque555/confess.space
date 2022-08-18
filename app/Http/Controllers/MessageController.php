@@ -54,11 +54,7 @@ class MessageController extends Controller
          
             $message->save();
 
-            if(Auth::check()) {
-                return redirect('home?sendMessage=true');
-            } else {
-                return redirect('next?sendMessage=true');
-            }
+            return redirect('message/sent');
        
         }
 
@@ -71,5 +67,10 @@ class MessageController extends Controller
         $message->delete();
 
         return redirect('home');
+    }
+
+    public function sent(Request $request)
+    {
+        return view('messageSent');
     }
 }

@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon-16x16.png') }}">
-    <link rel="manifest" href="site.html">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5"> 
-    <meta name="msapplication-TileColor" content="#9f00a7">
-    <meta name="theme-color" content="#8a2be2">
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
 
     <meta property='og:title' content='Confess Space'/>
     <meta property='og:image' content='{{ asset("img/thumbnail.png") }}'/>
@@ -22,61 +28,56 @@
     <meta property='og:image:height' content='627' />
     <meta property="og:type" content='website'/>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com/">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" integrity="sha512-k78e1fbYs09TQTqG79SpJdV4yXq8dX6ocfP0bzQHReQSbEghnS6AQHE2BbZKns962YaqgQL16l7PkiiAHZYvXQ==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('css/style3860.css?v=1') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="{{ asset('js/jquery.min.js') }}" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}" integrity="sha512-ANkGm5vSmtDaoFA/NB1nVJzOKOiI4a/9GipFtkpMG8Rg2Bz8R1GFf5kfL0+z0lcv2X/KZRugwrAlVTAgmxgvIg==" crossorigin="anonymous"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PDJG8MQ8K"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-8PDJG8MQ8K');
-    </script>
-    <title>Confess Space</title>
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="logo" href="index.html">Confess.space</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="mr-auto">&nbsp;</div>
-            <div class="mt-2 mt-lg-0">
+    <title>{{ config('app.name', 'Confess Space') }}</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="d-flex justify-content-md-between flex-md-row flex-column">
+          <img src="{{ asset('img/logo_w@2x.png') }}" class="logo-image" />
+          <div class="mr-4 auth-btn">
             @if (Route::has('login'))
                 @if (Auth::check())
-                    <a href="{{ url('register') }}" class="btn btn-outline-light mr-1">Inbox</a>
-                    <button type="button" class="btn btn-outline-light ml-1" data-toggle="modal" data-target="#logout">
-                    Log out
-                    </button>
+                <button class="mr-5" onClick="window.location.href='{{ url('home') }}'">Inbox</button>
+                <button class="" onClick="window.location.href='{{ url('logout') }}'">Logout</button>
                 @else
-                <a href="{{ url('register') }}" class="btn btn-outline-light mr-1">Create Account</a>
-                <a href="{{ url('login') }}" class="btn btn-outline-light ml-1">Login</a>
+                <!-- <a href="{{ url('register') }}" class="btn btn-outline-light mr-1">Create Account</a>
+                <a href="{{ url('login') }}" class="btn btn-outline-light ml-1">Login</a> -->
+                <button class="mr-5" onClick="window.location.href='{{ url('register') }}'">Get Started</button>
+                <button class="" onClick="window.location.href='{{ url('login') }}'">Login</button>
                 @endif
             @endif
-            </div>
-            </div>
-        </nav>
+          </div>
+        </div>
+      </header>
 
-        @yield('content')
+      <div class="content">
+            @yield('content')
+      </div>
     </div>
+    <br />
+    <br />
+    <br />
+    <footer>
+      <div class="first-column">
+        <div class="row">
+          <div class="col-md-3 text-center"><label>TERMS OF USE</label></div>
+          <div class="col-md-3 text-center"><label>DISCLAIMER</label></div>
+          <div class="col-md-3 text-center"><label>COOKIE POLICY</label></div>
+          <div class="col-md-3 text-center"><label>PRIVACY POLICY</label></div>
+        </div>
+      </div>
+      <div class="second-column text-center p-3">
+        © 2022 Copyright: Confess.Space
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ asset('js/jquery-3.2.1.slim.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
-    <!-- Scripts -->
-    <!-- <script src="{{ asset('js/app.js') }}"></script> -->
-</body>
+    @yield('scripts')
+    
+  </body>
 </html>
