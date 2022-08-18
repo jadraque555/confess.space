@@ -12,7 +12,7 @@
                     <h4 class="text-white pt-4 mx-md-4 text-center">
                         <span style="font-size: 20px">Message your friend</span>
                         <span class="font-weight-bold"
-                        >secretly <img src="{{ asset('img/kidhat.png') }}"
+                        >secretly <img src="{{ asset('img/kidhat.PNG') }}"
                         /></span>
                     </h4>
                     <div class="d-flex flex-row">

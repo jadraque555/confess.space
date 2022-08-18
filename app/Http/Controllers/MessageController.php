@@ -54,7 +54,13 @@ class MessageController extends Controller
          
             $message->save();
 
-            return redirect('message/sent');
+            if(Auth::check()) {
+                return redirect('home');
+            } else {
+                return redirect('message/sent');
+            }
+            // return redirect('message/sent');
+            
        
         }
 
