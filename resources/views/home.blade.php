@@ -28,10 +28,20 @@
         color:white;
         border:0px;
     }
+    @media only screen and (max-width: 600px) { 
+        .input-div-regular {
+            margin-left:10px !important;
+            margin-right:10px !important
+        }
+        .media-icon img {
+            width: 30px !important;
+            height:30px !important;
+        }
+    }
 
 </style>
 <br />
-        <div class="row mx-md-3">
+        <div class="row mx-md-3 mx-1">
           <div class="col-md-3"></div>
           <div class="col-md d-flex flex-column">
             <div class="div-form-login mx-md-5 hide-btn-div">
@@ -91,7 +101,7 @@
               <h4 class="font-weight-bold text-white text-center">
                 Share your Link
               </h4>
-              <div class="d-flex flex-row justify-content-center pb-4">
+              <div class="d-flex flex-row justify-content-center pb-4 media-icon">
                 <div class="">
                   <img
                     src="{{ asset('img/instagram.png') }}"

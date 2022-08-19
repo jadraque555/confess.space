@@ -35,16 +35,14 @@
       <header>
         <div class="d-flex justify-content-md-between flex-md-row flex-column">
           <img src="{{ asset('img/logo_w@2x.png') }}" class="logo-image" />
-          <div class="mr-4 auth-btn">
+          <div class="mr-md-4 auth-btn d-flex justify-content-sm-between">
             @if (Route::has('login'))
                 @if (Auth::check())
-                <button class="mr-5" onClick="window.location.href='{{ url('home') }}'">Inbox</button>
-                <button class="" onClick="window.location.href='{{ url('logout') }}'">Logout</button>
+                <a><button class="mr-5" onClick="window.location.href='{{ url('home') }}'">Inbox</button></a>
+                <a><button class="" onClick="window.location.href='{{ url('logout') }}'">Logout</button></a>
                 @else
-                <!-- <a href="{{ url('register') }}" class="btn btn-outline-light mr-1">Create Account</a>
-                <a href="{{ url('login') }}" class="btn btn-outline-light ml-1">Login</a> -->
-                <button class="mr-5" onClick="window.location.href='{{ url('register') }}'">Get Started</button>
-                <button class="" onClick="window.location.href='{{ url('login') }}'">Login</button>
+                <a><button class="mr-md-5 mr-2" onClick="window.location.href='{{ url('register') }}'">Get Started</button></a>
+                <a><button class="" onClick="window.location.href='{{ url('login') }}'">Login</button></a>
                 @endif
             @endif
           </div>

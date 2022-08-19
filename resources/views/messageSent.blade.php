@@ -2,7 +2,7 @@
 
 @section('content')
 <br /><br /><br />
-        <div class="row mx-md-3">
+        <div class="row mx-md-3 mx-2">
           <div class="col-md-3"></div>
           <div class="col-md d-flex flex-column">
             <div class="div-form-login mx-md-4 px-2 pb-4">

@@ -4,7 +4,7 @@
 @section('content')
 
 <br /><br />
-        <div class="row mx-md-3">
+        <div class="row mx-3">
           <div class="col-md-3"></div>
           <div class="col-md div-form-login mx-md-5">
             <form class="form-horizontal login-form" method="POST" id="formLogin" action="{{ route('login') }}">
@@ -85,7 +85,7 @@
           <div class="col-md-3"></div>
         </div>
         <br />
-        <div class="row mx-md-3">
+        <div class="row mx-3">
           <div class="col-md-3"></div>
           <div class="col-md div-form-login mx-md-5">
             <div class="mx-md-3 mb-3">

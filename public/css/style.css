@@ -2,6 +2,36 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+@media only screen and (max-width: 600px) {
+  header {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    padding-bottom: 20px !important;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .div-form-login .title {
+    font-size: 25px !important;
+    display: flex;
+    justify-content: center;
+  }
+  /* .div-form-login {
+    background-image: linear-gradient(
+      to right,
+      #dd5f88,
+      #e87089,
+      #f1818c,
+      #f89390,
+      #ffa497
+    );
+    border-radius: 20px;
+  } */
+}
+
 header {
   background-color: #fcd0ca;
   padding-top: 12px;
@@ -61,21 +91,6 @@ header .auth-btn button {
     #f89390,
     #ffa497
   );
-  /* background-image: linear-gradient(
-      to right top,
-      #dd5f88,
-      #dd5f88,
-      #dd5f88,
-      #dd5f88,
-      #dd5f88,
-      #e16588,
-      #e56a88,
-      #e87089,
-      #ef7d8b,
-      #f58a8e,
-      #fa9792,
-      #ffa497
-    ); */
   border-radius: 20px;
 }
 

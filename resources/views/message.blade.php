@@ -1,8 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+    @media only screen and (max-width: 600px) { 
+      .btn-send {
+        font-size:15px !important
+      }
+      .div-form-login.message-info h4 span {
+        font-size: 15px !important
+      }
+      .message-info h4 {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+</style>
 <br />
-        <div class="row mx-md-3">
+        <div class="row mx-md-3 mx-1">
           <div class="col-md-3"></div>
           <div class="col-md d-flex flex-column">
             <div class="div-form-login mx-md-5 pb-4 px-3">
@@ -42,7 +56,7 @@
                         style="height: 42px; cursor: pointer"
                         >
                         <a
-                            class="pt-1 font-weight-bold"
+                            class="pt-1 font-weight-bold btn-send"
                             style="color: #dd5f88; font-size: 25px"
                             onClick="handleSumitForm()"
                         >
@@ -52,7 +66,7 @@
                     </div>
                 </form>
             </div>
-            <div class="div-form-login mx-md-5 pb-4 mt-4">
+            <div class="div-form-login message-info mx-md-5 pb-4 mt-4">
               <h4 class="text-white pt-4 mx-md-4">
                 <span style="font-size: 18px"
                   >Confess anonymously, they will never know who sent the
