@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="propeller" content="b056cb1bce8301b4577224e481d5f18f">
     <meta property='og:title' content='Confess Space'/>
     <meta property='og:image' content='{{ asset("img/thumbnail.png") }}'/>
     <meta property='og:description' content='Confess Space'/>
@@ -26,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap"
       rel="stylesheet"
     />
-    
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PDJG8MQ8K"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -39,7 +40,7 @@
     <title>{{ config('app.name', 'Confess Space') }}</title>
   </head>
   <body>
-    <div class="container">
+    <div class="">
       <header>
         <div class="d-flex justify-content-md-between flex-md-row flex-column">
           <img src="{{ asset('img/logo_w@2x.png') }}" class="logo-image" />
@@ -57,22 +58,28 @@
         </div>
       </header>
 
-      <div class="content">
+      <div class="content container">
             @yield('content')
       </div>
     </div>
     <br />
     <br />
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <footer>
-      <div class="first-column">
+      <!-- <div class="first-column">
         <div class="row">
           <div class="col-md-3 text-center"><label>TERMS OF USE</label></div>
           <div class="col-md-3 text-center"><label>DISCLAIMER</label></div>
           <div class="col-md-3 text-center"><label>COOKIE POLICY</label></div>
           <div class="col-md-3 text-center"><label>PRIVACY POLICY</label></div>
         </div>
-      </div>
+      </div> -->
       <div class="second-column text-center p-3">
         © 2022 Copyright: Confess.Space
       </div>

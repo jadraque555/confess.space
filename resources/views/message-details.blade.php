@@ -21,6 +21,11 @@
         display: flex;
         justify-content: center;
       }
+      textarea {
+          border: none;
+          resize: none;
+          cursor: pointer;
+      }
     </style>
     <title>Confess Space</title>
   </head>
@@ -37,9 +42,11 @@
             <br />
             <div
               class="bg-white"
-              style="height: 150px; position: relative; border-radius: 30px"
+              style="position: relative; border-radius: 30px"
             >
-              <div class="px-4 pt-2 font-weight-bold">{{ $message->Message }}</div>
+              <div class="px-4 pt-2 font-weight-bold"> 
+                <textarea class="w-100" readOnly>{{ $message->Message }}</textarea>
+              </div>
               <div
                 style="
                   background-image: linear-gradient(
@@ -77,5 +84,21 @@
     <script src="{{ asset('js/jquery-3.2.1.slim.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    
+    <script>
+        $(document).ready(function(){
+            const txtLength =  $('textarea').val().length;
+
+            if(txtLength <= 100) {
+                $('textarea').addClass('pb-4')
+            } 
+            $('textarea').each(function () {
+                this.setAttribute('style', 'height:' + (this.scrollHeight + 50) + 'px;overflow-y:hidden;');
+            }).on('input', function () {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+        })
+    </script>
   </body>
 </html>

@@ -57,7 +57,7 @@
                         >
                         <a
                             class="pt-1 font-weight-bold btn-send"
-                            style="color: #dd5f88; font-size: 25px"
+                            style="color: #dd5f88; font-size: 17px"
                             onClick="handleSumitForm()"
                         >
                             Send Secret Message <img src="{{ asset('img/psst.PNG') }}" />

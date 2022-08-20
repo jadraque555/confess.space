@@ -38,12 +38,17 @@
             height:30px !important;
         }
     }
+    textarea {
+        border: none;
+        resize: none;
+        cursor:pointer;
+    }
 
 </style>
 <br />
         <div class="row mx-md-3 mx-1">
           <div class="col-md-3"></div>
-          <div class="col-md d-flex flex-column">
+          <div class="col-md-6 d-flex flex-column">
             <div class="div-form-login mx-md-5 hide-btn-div">
                 <h5 class="text-white font-weight-bold text-center mt-3" style="font-size:22px">Take a screenshot of these details</h5>
                 <p class="text-center text-white px-4" style="font-size:15px">You need these details to login from anywhere.
@@ -211,10 +216,12 @@
                     @foreach($messages as $key => $message)
                         <div
                         class="bg-white mb-2"
-                        style="height: 150px; position: relative; border-radius: 30px;cursor:pointer"
+                        style="height: auto; position: relative; border-radius: 30px;cursor:pointer"
                         onClick="window.location.href='{{ url('view/').'/'.$message->id }}'"
                         >
-                        <div class="px-4 pt-2">{{ $message->Message }}</div>
+                        <div class="px-4 pt-2">
+                            <textarea class="w-100" readOnly>{{ $message->Message }}</textarea>
+                        </div>
                         <div class="d-flex justify-content-between"
                             style="
                             background-image: linear-gradient(
@@ -514,6 +521,20 @@ Send the link as Direct Message(DM) to friends.
 @section('scripts')
 
     <script>
+        $(document).ready(function(){
+            const txtLength =  $('textarea').val().length;
+
+            if(txtLength <= 100) {
+                $('textarea').addClass('pb-5 mb-2')
+            }
+
+            $('textarea').each(function () {
+                this.setAttribute('style', 'height:' + (this.scrollHeight + 50) + 'px;overflow-y:hidden;');
+            }).on('input', function () {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+        })
         const showBtnDiv = $(".show-btn-div");
         const hideBtnDiv = $(".hide-btn-div");
 
