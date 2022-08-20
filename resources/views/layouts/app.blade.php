@@ -7,6 +7,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta property='og:title' content='Confess Space'/>
+    <meta property='og:image' content='{{ asset("img/thumbnail.png") }}'/>
+    <meta property='og:description' content='Confess Space'/>
+    <meta property='og:url' content='{{ url("/") }}'/>
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='627' />
+    <meta property="og:type" content='website'/>
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon-16x16.png') }}">
@@ -19,14 +26,15 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap"
       rel="stylesheet"
     />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PDJG8MQ8K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <meta property='og:title' content='Confess Space'/>
-    <meta property='og:image' content='{{ asset("img/thumbnail.png") }}'/>
-    <meta property='og:description' content='Confess Space'/>
-    <meta property='og:url' content='{{ url("/") }}'/>
-    <meta property='og:image:width' content='1200' />
-    <meta property='og:image:height' content='627' />
-    <meta property="og:type" content='website'/>
+    gtag('config', 'G-8PDJG8MQ8K');
+    </script>
 
     <title>{{ config('app.name', 'Confess Space') }}</title>
   </head>
